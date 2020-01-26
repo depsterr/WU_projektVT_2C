@@ -5,6 +5,8 @@
 
 body {
 	background-color: white;
+	width: 100vw;
+	height: 200vh;
 }
 
 #background {
@@ -15,6 +17,7 @@ body {
 	height: 100%;
 	background-color: white;
 	opacity: 0.3;
+	transition: all 0.05s;
 }
 
 #background img {
@@ -27,6 +30,15 @@ body {
 	width: 100%;
 	height: 5vh;
 	background-color: white;
+}
+
+#logo {
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	text-font: sans-serif;
+	text-align: center;
+	text-size: 24px;
 }
 
 /* Desktop CSS */
