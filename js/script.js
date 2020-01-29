@@ -35,12 +35,9 @@ function amountScrolled(){
 /* We need to get measurments to be able to calculate the scroll percentage */ 
 getMeasurments();
 
-/* Fix all paralax elements */
-/*
 amountScrolled();
 for (var n = 0; n < paralax1.length; n++)
 	paralax1[n].style.top = (scrollTop * -0.75 + "px");
-*/
 
 
 /* Recalculate height etc on resize */
