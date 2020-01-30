@@ -22,14 +22,10 @@ body {
 	z-index: 8;
 	position: fixed;
 	left: 0;
-	width: 100%;
+	width: 100vw;
 	height: 100%;
 	background-color: white;
 	opacity: 0.5;
-}
-
-#aboutbg {
-	opacity: 0.3;
 }
 
 #background img {
@@ -42,7 +38,7 @@ body {
 	padding-left: 10px;
 	position: fixed;
 	top: 0;
-	width: 100%;
+	width: 100vw;
 	height: var(--nav-height);
 	background-color: aliceblue;
 	z-index: 10;
@@ -78,21 +74,24 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100vw;
 }
 
 #aboutmain {
-	position: relative;
+	width: 100vw;
+	position: absolute;
 	top: var(--nav-height);
-	padding: var(--padding);
+	padding-top: var(--padding);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	color: white;
+	z-index: 9;
 }
 
 #aboutmain article {
 	padding: var(--padding);
 }
-
 
 #logo {
 	position: absolute;
@@ -107,7 +106,7 @@ body {
 #site-footer {
 	position: absolute;
 	top: 120vh;
-	width: 100vw;
+	width: 100vw - var(--padding);
 	height: 40vh;
 	background-color: aliceblue;
 	z-index: 10;

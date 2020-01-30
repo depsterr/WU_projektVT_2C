@@ -23,6 +23,7 @@ function getMeasurments(){
 	winHeight= window.innerHeight || (document.documentElement || document.body).clientHeight;
 	docHeight = getDocHeight();
 	trackLength = docHeight - winHeight;
+	amountScrolled(); /* After getting new measurments we want to update the scroll */
 }
 
 
@@ -30,25 +31,22 @@ function getMeasurments(){
 function amountScrolled(){
     scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
     pctScrolled = scrollTop/trackLength * 100;
+	/* Update parallax */
+	for (var n = 0; n < paralax1.length; n++)
+		paralax1[n].style.top = (scrollTop * -0.4 + "px");
+	console.log(scrollTop + "px");
 }
 
 /* We need to get measurments to be able to calculate the scroll percentage */ 
 getMeasurments();
 
-amountScrolled();
-for (var n = 0; n < paralax1.length; n++)
-	paralax1[n].style.top = (scrollTop * -0.75 + "px");
-
-
 /* Recalculate height etc on resize */
 window.addEventListener("resize", function(){
 	getMeasurments();
+	amountScrolled();
 }, false)
  
 /* Recalculate scroll on scroll */
 window.addEventListener("scroll", function(){
     amountScrolled();
-	for (var n = 0; n < paralax1.length; n++)
-		paralax1[n].style.top = (scrollTop * -0.5 + "px");
-	console.log(scrollTop + "px");
 }, false)
