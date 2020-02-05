@@ -3,8 +3,7 @@ var winHeight, docHeight, trackLength;
 
 /* Variables used for keeping track of scrolling */
 var scrollTop, pctScrolled;
-scrollTop = pctScrolled = 0;
-
+scrollTop = pctScrolled = 0; 
 /* Paralax Elements */
 var paralax1 = document.getElementsByClassName("paralax1");
 
@@ -33,7 +32,7 @@ function amountScrolled(){
     pctScrolled = scrollTop/trackLength * 100;
 	/* Update parallax */
 	for (var n = 0; n < paralax1.length; n++)
-		paralax1[n].style.top = (scrollTop * -0.4 + "px");
+		paralax1[n].style.top = (scrollTop * -0.6 + "px");
 	console.log(scrollTop + "px");
 }
 
