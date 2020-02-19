@@ -7,6 +7,11 @@ scrollTop = pctScrolled = 0;
 /* Paralax Elements */
 var paralax1 = document.getElementsByClassName("paralax1");
 
+/* Burger menu */
+const burger = document.querySelector(".hamburger");
+const nav = document.querySelector(".navLinks");
+
+
 /* Returns the height of the document in pixels */
 function getDocHeight() {
 	var D = document;
@@ -49,3 +54,12 @@ window.addEventListener("resize", function(){
 window.addEventListener("scroll", function(){
     amountScrolled();
 }, false)
+
+function
+toggleMenu()
+{
+	nav.classList.toggle("navActive");
+	burger.classList.toggle("toggle");
+}
+
+burger.addEventListener("click", toggleMenu);
