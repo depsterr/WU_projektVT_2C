@@ -11,7 +11,6 @@ var paralax1 = document.getElementsByClassName("paralax1");
 const burger = document.querySelector(".hamburger");
 const nav = document.querySelector(".navLinks");
 
-
 /* Returns the height of the document in pixels */
 function getDocHeight() {
 	var D = document;
