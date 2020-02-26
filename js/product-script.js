@@ -6,7 +6,8 @@
 const images = document.getElementsByClassName("listimg");
 const titles = document.getElementsByClassName("listh");
 const desc = document.getElementById("desc");
-const desctitle = document.getElementById("desch");
+const descTitle = document.getElementById("desch");
+const buyButton = document.getElementById("buybtn");
 
 /*
 	Get all variables and store in vars variable
@@ -31,13 +32,27 @@ if (!(Object.entries(vars).length === 0 && vars.constructor === Object)) {
 
 	/* Set name and image name */
 	var product = vars["product"];
-	var productImage = "img/" + vars["prodcut"] + ".png";
+	var productImage = "img/" + product + ".jpg";
+	console.log(productImage);
 	var productDescription = "";
-	var productDescriptionTitle = "";
+	var buyLink = "";
 
 	/* Set the product description */
 	switch (product) {
-		case "":
+		case "Hoodie":
+			productDescription = "This is the finest hoodie you will ever find, made from real elfs.";
+			break;
+		case "Tee":
+			productDescription = "This tee is fancier than a fine steak.";
+			break;
+		case "Shoes":
+			productDescription = "These shoes are better than socks.";
+			break;
+		case "Pants":
+			productDescription = "If you don't buy these I will kill you. You have been warned.";
+			break;
+		case "Jacket":
+			productDescription = "Mans not hot.";
 			break;
 	}
 
@@ -51,8 +66,9 @@ if (!(Object.entries(vars).length === 0 && vars.constructor === Object)) {
 	/* All images */
 	for (var n = 0; n < images.length; n++) {
 		images[n].src = productImage;
+		images[n].alt = product + " image";
 	}
 
 	desc.innerHTML = productDescription;
-	descTitle.innerHTML = productDescriptionTitle;
+	descTitle.innerHTML = product + " description";
 }

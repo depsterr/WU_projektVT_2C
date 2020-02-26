@@ -9,6 +9,10 @@
 	overflow-x: hidden;
 }
 
+body * {
+	overflow: hidden;
+}
+
 body {
 	background-color: white;
 	height: 160vh
@@ -145,14 +149,21 @@ body {
 
 .listimg {
 	grid-area: img;
-	background: blue;
 	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.listimg img {
+	width: auto;
 	height: 100%;
 }
 
 .listh {
 	grid-area: h1;
-	background: red;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -165,7 +176,6 @@ body {
 
 .buying {
 	grid-area: buy;
-	background: black;
 	width: 100%;
 	height: 100%;
 }
@@ -216,6 +226,7 @@ body {
 	grid-template-areas:
 		"img img img"
 		"h1  h1  buy";
+	margin-bottom: var(--padding);
 }
 
 #productpagemain article {
@@ -244,7 +255,8 @@ body {
 	background-color: aliceblue;
 	z-index: 10;
 	padding: var(--padding);
-	max-width: 100vw
+	max-width: 100vw;
+	text-align: center;
 }
 
 #cartmain {
