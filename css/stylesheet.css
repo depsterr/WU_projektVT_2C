@@ -104,49 +104,6 @@ body {
 	padding: var(--padding);
 }
 
-#productlistmain {
-
-	position: absolute;
-
-	margin: 10vw;
-	margin: 10vw;
-
-	top: var(--nav-height);
-
-	z-index: 9;
-
-	display: grid;
-
-	height: 250vh;
-	width: 80vw;
-
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-
-	grid-gap: 20px;
-
-	grid-template-areas:
-		"li1"
-		"li2"
-		"li3"
-		"li4"
-		"li5";
-}
-
-#productlistmain section {
-	overflow: hidden;
-	border-radius: 5px;
-	padding: var(--padding);
-	background-color: rgba(255,255,255,0.7);
-	display: grid;
-	grid-gap: 5px;
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-rows: 3fr 1fr;
-	grid-template-areas:
-		"img img img"
-		"h1  h1  buy";
-}
-
 .listimg {
 	grid-area: img;
 	width: 100%;
@@ -372,6 +329,65 @@ body {
 	transform: translatex(40vw);
 }
 
+#productlistmain {
+
+	position: absolute;
+
+	top: calc(var(--nav-height) + 5vw);
+	left: 10vw;
+
+	z-index: 9;
+
+	display: grid;
+
+	height: 250vh;
+	width: 80vw;
+
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+	grid-gap: 20px;
+
+	grid-template-areas:
+		"li1"
+		"li2"
+		"li3"
+		"li4"
+		"li5";
+}
+
+#productlistmain section {
+	overflow: hidden;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.7);
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 3fr 1fr;
+	grid-template-areas:
+		"img img img"
+		"h1  h1  buy";
+}
+
+
 /* Desktop CSS */
 @media screen and (min-width: 768px) {
+	/* product page */
+	#productlistmain {
+
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 50vh 50vh;
+	height: calc(105vh + 20px + 5vh);
+
+	grid-gap: 20px;
+
+	grid-template-areas:
+		"li1 li2 li3"
+		"li4 li5 li5";
+	}
+
+	.prodbody {
+		/* Height of cards, padding for cards, height of nav */
+		height: calc(105vh + 20px + 5vh);
+	}
 }
