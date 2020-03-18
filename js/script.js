@@ -1,3 +1,9 @@
+/*
+	This script file provides functionality found on all pages
+	in form of the background parallax effect as well as the
+	hamburger menu.
+*/
+
 /* Variables used for calculating percentage */
 var winHeight, docHeight, trackLength;
 
@@ -54,6 +60,8 @@ window.addEventListener("scroll", function(){
     amountScrolled();
 }, false)
 
+/* Toggle styling for hamburger menu */
+
 function
 toggleMenu()
 {
@@ -61,4 +69,5 @@ toggleMenu()
 	burger.classList.toggle("toggle");
 }
 
+/* Detect clicks on hamburger menu */
 burger.addEventListener("click", toggleMenu);

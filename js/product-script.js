@@ -1,6 +1,18 @@
 /*
-	The purpose of this file is to take URL variables telling the site what product
-	is to be viewed and then editing the content of the page accordingly.
+	This is a script which is only loaded on the product page.
+	It has two main purposes:
+
+	- Loading the proper images and descriptions
+
+	- Adding items to the cart
+
+	The first is done by looking at the url arguments, in this case
+	?product=<name> in the url. This script then adjusts the content
+	of this page accordingly.
+
+	The second is done by using functions defined in cookies.js to add
+	items to a list stored in the cookies. This can then be read on the
+	cart page to list the added items.
 */
 
 const images = document.getElementsByClassName("listimg");
@@ -20,18 +32,16 @@ var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,k
 });
 
 /*
-	Only run if vars are not empty
-	Source: https://stackoverflow.com/questions/679915/how-do-i-test-for-an-empty-javascript-object
-*/
-
-/*
 	Change images and text depending on what product we are viewing
 */
+
+/* Define this variable outside so that we can use it later */
+var product = ""
 
 if (!(Object.entries(vars).length === 0 && vars.constructor === Object)) {
 
 	/* Set name and image name */
-	var product = vars["product"];
+	product = vars["product"];
 	var productImage = "img/" + product + ".jpg";
 	console.log(productImage);
 	var productDescription = "";
@@ -72,3 +82,16 @@ if (!(Object.entries(vars).length === 0 && vars.constructor === Object)) {
 	desc.innerHTML = productDescription;
 	descTitle.innerHTML = product + " description";
 }
+
+/*
+	A function to add the item to the cart and redirect
+	to the cart
+*/
+function
+addToCart() {
+	AddToCookieList(product);
+	window.location.href = "cart.html"
+}
+
+/* Make the add to cart button functional */
+buyButton.addEventListener("click", addToCart);
