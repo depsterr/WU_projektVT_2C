@@ -50,10 +50,10 @@ if (!(Object.entries(vars).length === 0 && vars.constructor === Object)) {
 	/* Set the product description */
 	switch (product) {
 		case "Hoodie":
-			productDescription = "This is the finest hoodie you will ever find, made from real elfs.";
+			productDescription = "This is the finest hoodie you will ever find, made from real elfs. It's the finest piece of art that you will ever find, and if you do not pearchuse it you will be forever cursed";
 			break;
 		case "Tee":
-			productDescription = "This tee is fancier than a fine steak.";
+			productDescription = "This tee is fancier than a fine steak. In fact, it is the finest ";
 			break;
 		case "Shoes":
 			productDescription = "These shoes are better than socks.";
