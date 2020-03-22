@@ -256,11 +256,25 @@
 
     <h2>4. Testning</h2>
     <!-- Testa i Chrome + Firefox eller Safari (på både dator och mobil). Skiljer sig resultatet? Har du behövt anpassa ditt kod/innehåll efter de olika webbläsarna? Hur gick valideringen? Vad säger contrastchecker.com om text/bakgrundsfärg? Hur ser resultatet ut på en riktig telefon? -->
+	<p> Min testing har fungerat hyfsat bra, jag har testat i chrome, firefox, och mobil versionen av chrome och firefox och det har funkat bra på alla dessa. Tyvärr har jag inte haft tillgång till safari, dock har jag haft tillgång till en webbläsare med samma webengine som safari, så den borde ha samma resultat. Tyvärr så har jag haft lite problem med bilder i denna version, och jag har lyckats fixa de flesta utom ett problem på product-list sidan där den inte verkar gilla CSS stylingen på mina bilder. Dock så har jag inte haft tid att fixa detta, och att safari browsern inte har ett inspect element tool gör det inte lättare, så detta är något jag skulle jobbat mer med om jag hade tid. Dock så har jag kunnat fixa andra problem i den browsern, mest med att bilder inte stylades korrekt.</p>
+
+	<p> Eftersom jag använder mig av svart text på en vit bakgrund så har jag inte fått några problem med contrastchecker, vilket delvis var varför jag valde dessa färger, jag ville ha en väldigt minilalistisk design som var lätt och läsa, och då är det svårt att slå vit och svart. </p>
+
+	<p> När det gäller PC/mobil så funkar det som jag tänkt mig. Jag skulle nog lagt ner lite mer tid på PC sidan om jag kunde, men jag tycker att den duger som den är just nu. För mig så såg mobil sidan ut samma i mobil previewen i firefox och på min mobil. </p>
 
     <h2>5. Utvärdering</h2>
     <!-- Ex: Vad gick bra/mindre bra? (i arbetet/din förmåga).
     Nyanserat: "hur hade det blivit om jag istället hade...?"
     Konkreta förbättringsförslag i produkt + process. -->
+	<p> Allt som allt så tycker jag att detta projekt har gått bra, något som jag dock tycker är lite synd är att jag inte hade tid att skapa någon sorts checkout sida eller fler produkter. </p>
+
+	<p> Jag gjorde även hyfsat mycket saker med Javascript i detta projekt, vilket jag tyckte var kul, men kanske inte är optimalt utifrån ett betygs perspektiv, dock så tycker jag att jag lyckades att få resten av sidan bra också och inte bara la ner allting på javascript. Något annat som jag skulle kunnat göra bättre skulle nog kunna vara att dela up mina stylesheets lite. I detta projekt hade jag en stor CSS fil med alla sidors styling, och på ett sätt är ju detta bra då det finns många saker som jag använder mer än en gång, dock så finns det saker som bara används på en sida, och vid det laget så känns det lite dumt att ladda in all CSS för alla andra sidor varenda gång som man läser in en sida. </p>
+
+	<p> Något som jag hade tyckt varit interessant är hur min sida skulle sett ut om jag hade börjat designa för desktop, inte för att jag tror att det nödvändigtvist skulle blivit bättre utan bara för att jag tycker att det är interessant hur mycket sidans design blev påverkad av att jobba med "mobile first" tänket. T.ex så har jag nu en hamburgar meny på desktop sidan, vilket funkar, men kanske inte är det vanligaste valet. </p>
+
+	<p> Min största take away från det här projektet blir nog dock att inte överanvända position absolute, vilket är något som jag definitivt gjorde i detta projektet. Anledningen till att jag började med detta var att min scrollande bakgrund var position absolute, och sedan ville jag att annat skulle kunna visas framför den, och då var även det tvunget att vara position absolute, detta blev nästan som en butterfly effect där allt blev position absolute. Sidan funkar fortfarande, men att allt var position absolute har lett till en massa underlig CSS styling för t.ex body då den inte expanderar automatiskt och underliga problem där taggar tar upp mer plats än vad de borde och mycket annat underligt. Jag skulle nog alltså kunna gjort det bra mycket lättare för mig genom att inte använda så mycket position absolute som jag gjorde i detta projekt. <p>
+
+	<p> Något smart som jag kommer ta med mig är hur man kan använda sig av klasser och grid för att skapa många liknande "moduler". Detta syns på min product page sida där varje "kort" med en produkt på använder sig av display grid och alla element i den har ett grid element, dock så definerade jag endast det för en klass och sedan assignade en grid area till varja klass, på detta sättet kunda jag styla alla kort med en klass. Detta var kanske inte särskilt konstigt att man kunde göra, men det var något jag inte hade tänkt på innan. </p>
 
 </body>
 </html>
