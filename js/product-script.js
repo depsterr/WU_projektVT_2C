@@ -50,19 +50,19 @@ if (!(Object.entries(vars).length === 0 && vars.constructor === Object)) {
 	/* Set the product description */
 	switch (product) {
 		case "Hoodie":
-			productDescription = "This is the finest hoodie you will ever find, made from real elfs.";
+			productDescription = "Maecenas luctus finibus eros in convallis. Duis viverra velit quis lacus euismod, sit amet vulputate purus vulputate. Duis placerat felis a nulla mattis, a tincidunt libero commodo.";
 			break;
 		case "Tee":
-			productDescription = "This tee is fancier than a fine steak.";
+			productDescription = "Donec finibus molestie velit at pharetra. Aenean vel est at turpis vestibulum suscipit. Donec auctor porta massa sit amet pretium. Ut interdum felis eget massa accumsan vestibulum ut ac mi. Suspendisse suscipit erat quis leo finibus, non tincidunt arcu tempor.";
 			break;
 		case "Shoes":
-			productDescription = "These shoes are better than socks.";
+			productDescription = "Donec tortor ipsum, molestie vel nunc a, posuere eleifend velit. Mauris magna mi, suscipit sit amet urna et, suscipit tempor tellus. Donec et viverra leo. Integer ac orci id magna aliquet viverra. Aliquam elit mi, sagittis vestibulum pharetra a, consequat ac lectus.";
 			break;
 		case "Pants":
-			productDescription = "If you don't buy these I will kill you. You have been warned.";
+			productDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere ac ante aliquam dignissim. Mauris a nunc augue. Donec et elementum magna. Phasellus fermentum, erat at volutpat tempus, nulla mi ultrices dui, ut lacinia ex augue a metus. Pellentesque scelerisque placerat nunc, suscipit congue nunc hendrerit ac.";
 			break;
 		case "Jacket":
-			productDescription = "Mans not hot.";
+			productDescription = "Donec ante nulla, dapibus nec cursus non, aliquam in quam. Phasellus dictum rutrum enim eget tempus. Mauris mattis orci iaculis neque dignissim elementum. Nam condimentum eros in ex rhoncus ornare. Mauris ac risus dapibus, pretium ex nec, egestas ipsum.";
 			break;
 	}
 
