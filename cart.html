@@ -35,34 +35,37 @@
 	</nav>
 
 	<main id="cartmain">
-		<!-- Some products -->
-		<!-- todo make the buttons remove stuff and make it be dynamic with cookies and js -->
-		<section id="shoes-item" class="carthide">
+		<section id="no-item" class="cartsection">
+			<div class="cartname"><h1>Cart is empty.</h1></div>
+		</section>
+		<section id="shoes-item" class="carthide cartsection">
 			<img class="cartimg" src="img/Shoes.jpg" alt="Shoes">
 			<div class="cartname"><h1>Shoes</h1></div>
-			<img class="cartremove" src="img/cross.svg" alt="Remove from cart">
+			<img class="cartremove" id="shoes-remove" src="img/cross.svg" alt="Remove from cart">
 		</section>
-		<section id="jacket-item" class="carthide">
+		<section id="jacket-item" class="carthide cartsection">
 			<img class="cartimg" src="img/Jacket.jpg" alt="Jacket">
 			<div class="cartname"><h1>Jacket</h1></div>
-			<img class="cartremove" src="img/cross.svg" alt="Remove from cart">
+			<img class="cartremove" id="jacket-remove" src="img/cross.svg" alt="Remove from cart">
 		</section>
-		<section id="tee-item" class="carthide">
+		<section id="tee-item" class="carthide cartsection">
 			<img class="cartimg" src="img/Tee.jpg" alt="Tee">
 			<div class="cartname"><h1>Tee</h1></div>
-			<img class="cartremove" src="img/cross.svg" alt="Remove from cart">
+			<img class="cartremove" id="tee-remove" src="img/cross.svg" alt="Remove from cart">
 		</section>
-		<section id="pants-item" class="carthide">
+		<section id="pants-item" class="carthide cartsection">
 			<img class="cartimg" src="img/Pants.jpg" alt="Pants">
 			<div class="cartname"><h1>Pants</h1></div>
-			<img class="cartremove" src="img/cross.svg" alt="Remove from cart">
+			<img class="cartremove" id="pants-remove" src="img/cross.svg" alt="Remove from cart">
 		</section>
-		<section id="hoodie-item" class="carthide">
+		<section id="hoodie-item" class="carthide cartsection">
 			<img class="cartimg" src="img/Hoodie.jpg" alt="Hoodie">
 			<div class="cartname"><h1>Hooodie</h1></div>
-			<img class="cartremove" src="img/cross.svg" alt="Remove from cart">
+			<img class="cartremove" id="hoodie-remove" src="img/cross.svg" alt="Remove from cart">
 		</section>
-		<!-- Check out button -->
+		<section id="checkout-button" class="carthide cartsection">
+			<h1>Checkout</h1>
+		</section>
 	</main>
 	<script src="js/script.js"></script>
 	<script src="js/cookies.js"></script>

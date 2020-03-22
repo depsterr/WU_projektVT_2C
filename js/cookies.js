@@ -31,8 +31,7 @@ SetCookieList(data) {
 */
 function
 AddToCookieList(data) {
-	list = GetCookieList();
-	if (!list.includes(data)) {
+	list = GetCookieList(); if (!list.includes(data)) {
 		list.push(data);
 		SetCookieList(list);
 	}
@@ -57,6 +56,6 @@ RemoveFromCookieList(data) {
 	one. This is important becuase the Add and Remove functions
 	would be broken if there were no list to add to in the cookies.
 */
-if (document.cookie == undefined) {
+if (!document.cookie) {
 	SetCookieList([]);
 }
