@@ -42,7 +42,7 @@ if (!(Object.entries(vars).length === 0 && vars.constructor === Object)) {
 
 	/* Set name and image name */
 	product = vars["product"];
-	var productImage = "img/" + product + ".jpg";
+	var productImage = "img/" + product.toLowerCase() + ".jpg";
 	console.log(productImage);
 	var productDescription = "";
 	var buyLink = "";
